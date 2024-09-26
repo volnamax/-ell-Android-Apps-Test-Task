@@ -1,4 +1,4 @@
-package com.example.cell_android_apps_test_task.domain
+package com.example.cell_android_apps_test_task.domain.model
 
 import java.util.UUID
 
