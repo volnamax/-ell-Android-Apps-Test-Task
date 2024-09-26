@@ -1,4 +1,4 @@
-package com.example.cell_android_apps_test_task.ui.theme
+package com.example.cell_android_apps_test_task.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
