@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Cell-Android-Apps-Test-Task</string>
     <string name="createCell">СОТВОРОИТЬ</string>
+    <string name="Live">Живая</string>
+    <string name="IsLive">Жизнь</string>
+    <string name="IsDie">Жизнь умерла</string>
+
+
+    <string name="Die">Мертвая</string>
+
+
 </resources>

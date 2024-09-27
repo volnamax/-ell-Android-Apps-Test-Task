@@ -37,7 +37,6 @@ import com.example.cell_android_apps_test_task.R
 import com.example.cell_android_apps_test_task.domain.model.CellType
 import com.example.cell_android_apps_test_task.presentation.model.CellViewData
 import com.example.cell_android_apps_test_task.presentation.ui.theme.*
-import kotlinx.coroutines.launch
 import org.koin.androidx.compose.koinViewModel
 import java.util.UUID
 
@@ -151,13 +150,15 @@ fun CellItem(cell: CellViewData, modifier: Modifier) {
             Column(modifier = Modifier.padding(Space16)) {
                 if (cell.type == CellType.CELL)
                     Text(
-                        text = if (cell.isLive) "Живая" else "Мертвая",
+                        text = if (cell.isLive) stringResource(R.string.Live) else stringResource(R.string.Die),
                         fontWeight = FontWeight.Bold,
                         fontSize = SizeSp20
                     )
                 else
                     Text(
-                        text = if (cell.isLive) "Жизнь" else "Жизнь умерла",
+                        text = if (cell.isLive) stringResource(R.string.IsLive) else stringResource(
+                            R.string.IsDie
+                        ),
                         fontWeight = FontWeight.Bold,
                         fontSize = SizeSp20
                     )
