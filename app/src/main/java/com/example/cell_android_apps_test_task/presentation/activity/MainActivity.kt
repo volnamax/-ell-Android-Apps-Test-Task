@@ -9,6 +9,7 @@ import androidx.compose.material3.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.example.cell_android_apps_test_task.presentation.screen.main.CellsCreateScreen
+import com.example.cell_android_apps_test_task.presentation.ui.theme.BackGroundColorStart
 import com.example.cell_android_apps_test_task.presentation.ui.theme.CellAndroidAppsTestTaskTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,10 +21,10 @@ class MainActivity : ComponentActivity() {
             CellAndroidAppsTestTaskTheme {
                 Scaffold(
                     topBar = {
-                        TopAppBar(
+                        CenterAlignedTopAppBar(
                             title = { Text(text = "Клеточное наполнение") },
                             colors = TopAppBarDefaults.topAppBarColors(
-                                containerColor = Color(0xFF6200EE),
+                                containerColor = BackGroundColorStart,
                                 titleContentColor = Color.White
                             )
                         )

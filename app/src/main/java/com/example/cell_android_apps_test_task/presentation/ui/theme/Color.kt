@@ -13,3 +13,5 @@ val Pink40 = Color(0xFF7D5260)
 
 val ColorButtonCreateCell = Color(0xFF5A3472)
 
+val BackGroundColorStart = Color(0xFF2f004c)
+

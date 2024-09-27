@@ -7,6 +7,7 @@ fun Cell.toEntity(): CellEntity {
     return CellEntity(
         id = this.id,
         isAlive = this.isAlive,
+        type = this.type,
         descriptor = this.descriptor
     )
 }
@@ -15,6 +16,7 @@ fun CellEntity.toDomain(): Cell {
     return Cell(
         id = this.id,
         isAlive = this.isAlive,
+        type= this.type,
         descriptor = this.descriptor
     )
 }

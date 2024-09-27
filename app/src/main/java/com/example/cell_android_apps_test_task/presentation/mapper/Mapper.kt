@@ -7,6 +7,7 @@ fun Cell.toViewData(): CellViewData {
     return CellViewData(
         id = this.id,
         isLive = this.isAlive,
+        type = this.type,
         descriptor = this.descriptor
     )
 }
