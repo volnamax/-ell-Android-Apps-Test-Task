@@ -11,6 +11,6 @@ import com.example.cell_android_apps_test_task.datasource.room.entity.CellEntity
     version = 1
 )
 @TypeConverters(UUIDConverter::class)
-abstract class RoomDataBase : RoomDatabase() {
+abstract class CellDataBase : RoomDatabase() {
     abstract fun getCellDao(): CellDao
 }
