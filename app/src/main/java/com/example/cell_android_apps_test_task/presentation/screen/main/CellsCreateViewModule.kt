@@ -4,16 +4,19 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.cell_android_apps_test_task.domain.model.Cell
 import com.example.cell_android_apps_test_task.domain.repository.ICellRepository
+import com.example.cell_android_apps_test_task.presentation.mapper.toViewData
+import com.example.cell_android_apps_test_task.presentation.model.CellViewData
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import java.util.UUID
 
 
-class CellsCreateViewModule(private val cellRepository: ICellRepository ) : ViewModel() {
+class CellsCreateViewModule(private val cellRepository: ICellRepository) : ViewModel() {
+
     // Список клеток в виде StateFlow для наблюдения за изменениями
-    private val _cells = MutableStateFlow<List<String>>(emptyList())
-    val cells: StateFlow<List<String>> = _cells
+    private val _cells = MutableStateFlow<List<CellViewData>>(emptyList())
+    val cells: StateFlow<List<CellViewData>> = _cells
 
     // Добавление новой клетки в базу данных
     fun addNewCell() {
@@ -28,7 +31,7 @@ class CellsCreateViewModule(private val cellRepository: ICellRepository ) : View
             cellRepository.addCell(newCell)
 
             // Обновляем список клеток для отображения
-            val updatedCells = cellRepository.getAllCells().map { it.descriptor }
+            val updatedCells = cellRepository.getAllCells().map { it.toViewData() }
             _cells.value = updatedCells
         }
     }
