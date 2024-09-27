@@ -18,6 +18,20 @@ class CellsCreateViewModule(private val cellRepository: ICellRepository) : ViewM
     private val _cells = MutableStateFlow<List<CellViewData>>(emptyList())
     val cells: StateFlow<List<CellViewData>> = _cells
 
+
+    // Инициализация, которая автоматически загружает клетки при запуске экрана
+    init {
+        loadCells()
+    }
+
+    // Функция для загрузки клеток из репозитория
+    private fun loadCells() {
+        viewModelScope.launch {
+            val cellsFromRepo = cellRepository.getAllCells().map { it.toViewData() }
+            _cells.value = cellsFromRepo
+        }
+    }
+
     // Добавление новой клетки в базу данных
     fun addNewCell() {
         viewModelScope.launch {
@@ -30,9 +44,8 @@ class CellsCreateViewModule(private val cellRepository: ICellRepository) : ViewM
             // Добавляем новую клетку в репозиторий
             cellRepository.addCell(newCell)
 
-            // Обновляем список клеток для отображения
-            val updatedCells = cellRepository.getAllCells().map { it.toViewData() }
-            _cells.value = updatedCells
+            // После добавления обновляем список клеток
+            loadCells()
         }
     }
 }

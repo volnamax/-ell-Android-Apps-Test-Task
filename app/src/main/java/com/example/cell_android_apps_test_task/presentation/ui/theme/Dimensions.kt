@@ -3,6 +3,7 @@ package com.example.cell_android_apps_test_task.presentation.ui.theme
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+val Space2 = 2.dp
 val Space4 = 4.dp
 val Space8 = 8.dp
 val Space16 = 16.dp
@@ -10,6 +11,7 @@ val Space108 = 108.dp
 val Space6 = 6.dp
 
 val Size1 = 1.dp
+val Size6 = 6.dp
 val Size12 = 12.dp
 val Size16 = 16.dp
 
