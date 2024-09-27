@@ -7,8 +7,7 @@ import org.koin.dsl.module
 
 
 val viewmodelModule = module {
-    CellsCreateViewModule(
-        cellRepository = get<ICellRepository>()
-    )
+    viewModel { CellsCreateViewModule(cellRepository = get<ICellRepository>()) }
+
 
 }
