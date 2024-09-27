@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 import java.util.UUID
 
 @Entity(tableName = "cells")
-data class KitEntity(
+data class CellEntity(
     @PrimaryKey val id: UUID,
     val isLive : Boolean,
     val descriptor: String
