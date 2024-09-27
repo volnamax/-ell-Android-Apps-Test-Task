@@ -1,12 +1,12 @@
-package com.example.cell_android_apps_test_task.datasourse.mapper
+package com.example.cell_android_apps_test_task.datasource.mapper
 
-import com.example.cell_android_apps_test_task.datasourse.room.entity.CellEntity
+import com.example.cell_android_apps_test_task.datasource.room.entity.CellEntity
 import com.example.cell_android_apps_test_task.domain.model.Cell
 
 fun Cell.toEntity(): CellEntity {
     return CellEntity(
         id = this.id,
-        isLive = this.isLive,
+        isAlive = this.isAlive,
         descriptor = this.descriptor
     )
 }
@@ -14,7 +14,7 @@ fun Cell.toEntity(): CellEntity {
 fun CellEntity.toDomain(): Cell {
     return Cell(
         id = this.id,
-        isLive = this.isLive,
+        isAlive = this.isAlive,
         descriptor = this.descriptor
     )
 }

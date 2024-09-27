@@ -4,6 +4,6 @@ import java.util.UUID
 
 data class Cell (
     val id : UUID,
-    val isLive : Boolean,
+    val isAlive : Boolean,
     val descriptor: String
 )

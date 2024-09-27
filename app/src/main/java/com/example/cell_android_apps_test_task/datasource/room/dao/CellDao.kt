@@ -1,8 +1,8 @@
-package com.example.cell_android_apps_test_task.datasourse.room.dao
+package com.example.cell_android_apps_test_task.datasource.room.dao
 
 
 import androidx.room.*
-import com.example.cell_android_apps_test_task.datasourse.room.entity.CellEntity
+import com.example.cell_android_apps_test_task.datasource.room.entity.CellEntity
 import java.util.UUID
 
 @Dao

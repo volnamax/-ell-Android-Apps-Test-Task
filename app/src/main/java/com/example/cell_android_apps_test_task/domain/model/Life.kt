@@ -4,6 +4,6 @@ import java.util.UUID
 
 data class Life (
     val id : UUID,
-    val isLive: Boolean,
+    val isAlive: Boolean,
     val descriptor: String
 )
