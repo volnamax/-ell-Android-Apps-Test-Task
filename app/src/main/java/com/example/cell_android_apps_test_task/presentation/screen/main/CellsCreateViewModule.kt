@@ -55,7 +55,7 @@ class CellsCreateViewModule(private val cellRepository: ICellRepository) : ViewM
                 consecutiveAliveCount++
                 consecutiveDeadCount = 0
                 // Если три подряд живые клетки — добавляем "жизнь"
-                if (consecutiveAliveCount == 2) {
+                if (consecutiveAliveCount == 3) {
                     addLife()
                     consecutiveAliveCount = 0 // Сбрасываем счётчик
                 }
@@ -63,7 +63,7 @@ class CellsCreateViewModule(private val cellRepository: ICellRepository) : ViewM
                 consecutiveDeadCount++
                 consecutiveAliveCount = 0
                 // Если три подряд мёртвые клетки — убираем жизнь
-                if (consecutiveDeadCount == 2) {
+                if (consecutiveDeadCount == 3) {
                     updateLifeToDeadIfExists()
                     consecutiveDeadCount = 0 // Сбрасываем счётчик
                 }
