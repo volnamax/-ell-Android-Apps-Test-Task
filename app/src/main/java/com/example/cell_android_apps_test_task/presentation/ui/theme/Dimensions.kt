@@ -30,3 +30,6 @@ val CornerRadius16 = 16.dp
 val SizeSp14 = 14.sp
 val SizeSp18 = 18.sp
 val SizeSp20 = 20.sp
+val SizeSp32 = 32.sp
+
+val SizeSp68 = 68.sp

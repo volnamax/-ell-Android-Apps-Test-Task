@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.cell_android_apps_test_task"
-        minSdk = 34
+        minSdk = 30
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
